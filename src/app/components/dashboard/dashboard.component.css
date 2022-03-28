@@ -1,0 +1,9 @@
+.brand-logo{
+
+  width: 1350px;
+  height: 200px;
+}
+
+.nav-item.edit:hover{
+  color: aquamarine;
+}

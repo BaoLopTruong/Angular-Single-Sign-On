@@ -1,0 +1,92 @@
+<!-- Top navigation -->
+<!-- <nav >
+  <a >
+    <img class="brand-logo" src="assets/bkgr.jpg" alt="MMSoft">
+  </a>
+</nav> -->
+<!-- <script>
+  function clearcontent() {
+      var element= document.getElementById("clear");
+      element.classList.remove("media-body");
+  }
+</script> -->
+
+<!-- Sidebar navigation -->
+<div class="container-fluid">
+  <div class="row">
+
+    <nav class="col-md-2 d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/dashboard" style="color: black;">
+              <i class="fa fa-user"></i>  User Profile
+            </a>
+          </li>
+
+          <!-- home page -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/homepage">
+              <i style="color: black;" class="fa fa-home"></i>
+              <a style="color: black;"> Home</a>
+            </a>
+          </li>
+                    <!-- Calling SignOut() Api from AuthService -->
+                    <li class="nav-item" *ngIf="authService.isLoggedInn" >
+                      <a class="nav-link" (click)="authService.SignOut()"  >
+                        <i class="fa fa-sign-out"></i>
+                        <a class="edit">  Log out</a>
+                      </a>
+                    </li>
+
+                    <!-- calling logout() api from AuthService -->
+                    <!-- <li class="nav-item" >
+                      <a class="nav-link" (click)="authService.logoutMS()"  >
+                        <i class="fa fa-sign-out"></i>
+                        <a class="edit">  Log out MS</a>
+                      </a>
+                    </li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="inner-adjust">
+
+        <div class="pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">User Profile</h1>
+        </div>
+
+<!-- <div>
+  <p><strong>Hello: </strong>  {{profile?.displayName}}</p>
+
+  <p><strong>Email: </strong>  {{profile?.mail}}</p>
+
+  <p><strong>Id: </strong> {{profile?.id}}</p>
+
+</div> -->
+        <!-- Show user data when logged in -->
+        <div class="row" *ngIf="authService.userData as user" >
+          <div class="col-md-12">
+            <div class="media">
+              <img class="align-self-start mr-5 img-thumbnail rounded-circle" src="{{(user.photoURL) ? user.photoURL : '/assets/usericon.png'}}"
+                alt="{{user.displayName}} ">
+              <div class="media-body" id="clear">
+                <h1>Hello: <strong>{{user.displayName}}</strong></h1>
+                <p>User ID: <strong>{{user.uid}} ? </strong></p>
+                <p >Email: <strong>{{user.email}}  </strong></p>
+                <p>Email Verified: <strong>{{user.emailVerified}}</strong></p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+</div>
+
+

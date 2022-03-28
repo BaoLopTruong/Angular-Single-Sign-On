@@ -1,0 +1,59 @@
+.displayTable{
+  max-width: 320px;
+  margin: 0 auto;
+  border: darkgray 2px;
+  border-style: outset;
+  border-radius: 10px;
+}
+.displayTableCell{
+  border: 2px black;
+}
+h2{
+  text-align: center;
+  color: cornflowerblue;
+}
+h2:hover{
+  color:crimson
+}
+.formGroup{
+  margin-left: 60px;
+}
+.btnPrimary{
+  border-radius: 5px;
+  border-color: darkred;
+  background-color: deepskyblue;
+  color: aliceblue;
+  margin-top: 10px;
+  margin-left: 60px;
+}
+.btnPrimary:hover{
+  background-color:yellow;
+  color: black;
+}
+.forgotPassword{
+  margin-left: 60px;
+}
+.orInner{
+  color: black;
+  margin-left: 80px;
+
+}
+.or{
+  margin-top: 20px;
+}
+
+.googleBtn{
+  background-color: white;
+  color: black;
+  border: none;
+
+  width: 180px;
+  height: 30px;
+}
+.googleBtn:hover{
+
+color: plum;
+}
+.redirectToLogin{
+  margin-left: 50px;
+}

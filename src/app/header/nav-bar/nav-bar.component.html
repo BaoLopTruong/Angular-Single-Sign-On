@@ -1,0 +1,80 @@
+<!-- <ng-container *ngIf="show"> -->
+
+<!-- <nav class="navbar navbar-expand-sm bg-light ">
+
+  <ul class="navbar-nav"> -->
+    <!-- home page -->
+    <!-- <li class="nav-item">
+      <a class="nav-link" routerLink='/homepage'>Home</a>
+    </li> -->
+    <!-- user profile -->
+    <!-- <li class="nav-item">
+      <a class="nav-link"  routerLink="/dashboard">User Profile</a>
+    </li>
+    <span *ngIf="showAge; then condition1 else condition2"></span> -->
+    <!-- login -->
+    <!-- <li class="nav-item">
+      <ng-template #condition2>
+
+      <a class="nav-link"  routerLink='/sign-in'  >
+        <a (click)="myClickFunction(event)" >
+        <i class="fa fa-sign-in"></i>
+        Login</a>
+      </a>
+    </ng-template>
+    </li> -->
+
+    <!-- log out -->
+    <!-- <li class="nav-item">
+      <ng-template #condition1>
+      <a class="nav-link" (click)="authService.SignOut()"   >
+        <i class="fa fa-sign-out"></i>
+        <a class="edit" >  Log out</a>
+      </a>
+    </ng-template>
+    </li>
+  </ul>
+
+</nav> -->
+
+<!-- </ng-container> -->
+
+
+<div class="container-fluid">
+  <div class="row">
+
+    <nav class="col-md-2 d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/dashboard" style="color: black;">
+              <i class="fa fa-user"></i>  User Profile
+            </a>
+          </li>
+
+          <!-- home page -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/homepage">
+              <i style="color: black;" class="fa fa-home"></i>
+              <a style="color: black;"> Home</a>
+            </a>
+          </li>
+          <!-- login -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLink="/sign-in">
+              <i style="color: black;" class="fa fa-sign-in"></i>
+              <a style="color: black;"> Login</a>
+            </a>
+          </li> -->
+
+                <!-- Calling SignOut() Api from AuthService -->
+                <li class="nav-item">
+                  <a class="nav-link" (click)="authService.SignOut()" >
+                    <i class="fa fa-sign-out"></i>
+                    <a class="edit">  Log out</a>
+                  </a>
+                </li>
+        </ul>
+      </div>
+    </nav>

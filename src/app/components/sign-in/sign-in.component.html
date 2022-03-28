@@ -1,0 +1,79 @@
+<ngx-spinner></ngx-spinner>
+<div class="displayTable">
+  <div class="displayTableCell">
+
+    <div class="authBlock">
+      <h2>Sign In</h2>
+      <hr>
+      <div class="formGroup">
+        <label>E-Mail: </label><br>
+        <input type="text" class="formControlEmail" placeholder="Username" #userName required>
+      </div>
+
+      <div class="formGroup">
+        <label>Password: </label><br>
+        <input type="password" class="formControlPass" placeholder="Password"  #userPassword required>
+      </div>
+
+
+      <div class="forgotPassword">
+        <!-- <span routerLink="/forgot-password">Forgot Password?</span> -->
+        <a routerLink="/forgot-password"> Forgot Password?</a>
+        <ngx-spinner></ngx-spinner>
+      </div>
+    </div>
+
+
+      <!-- Calling SignIn Api from AuthService -->
+      <div class="formGroup" >
+        <!-- <input type="button" class="btnPrimary" ng-model="myVar" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)"> -->
+        <!-- <button class="btn btnPrimary"  (click)="authService.SignIn(userName.value, userPassword.value)">Login</button> -->
+<button class="btn btnPrimary"  (click)="authService.SignIn(userName.value, userPassword.value)">
+
+Login
+</button>
+
+        <ngx-spinner></ngx-spinner>
+      </div>
+
+      <div class="formGroup">
+        <span class="or"><span class="orInner">Or</span></span>
+      </div>
+
+      <!-- Calling GoogleAuth Api from AuthService -->
+      <div class="formGroup">
+        <button type="button" class="googleBtn" (click)="authService.GoogleAuth()">
+          <i class="fa fa-google" aria-hidden="true"></i>
+          Login with Google
+          <ngx-spinner></ngx-spinner>
+        </button>
+
+      </div>
+
+
+
+
+
+      <!-- Calling Microsoft Api from AuthService -->
+      <div class="formGroup">
+        <button type="button" class="googleBtn"  (click)="authService.MicrosoftAuth()" >
+          <i class="fa fa-windows" aria-hidden="true"></i>
+          Login with Microsoft
+          <ngx-spinner></ngx-spinner>
+        </button>
+
+      </div>
+
+
+
+
+
+    <div class="redirectToLogin">
+      <!-- <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span> -->
+      Don't have an account?<a routerLink="/register-user"> Sign Up</a>
+      <ngx-spinner></ngx-spinner>
+    </div>
+
+  </div>
+</div>
+
